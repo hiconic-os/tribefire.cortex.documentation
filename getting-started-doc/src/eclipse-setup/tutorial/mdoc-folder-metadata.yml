@@ -1,0 +1,60 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  00.intro.md: 
+
+  01.eclipse.md:
+
+  02.eclipse.md:
+
+  03.eclipse.md:
+
+  04.eclipse.md:
+
+  05.eclipse.md:
+
+  00.tomcat.md:
+
+  01.tomcat.md:
+
+  02.tomcat.md:
+
+  03.tomcat.md:
+
+  04.tomcat.md:
+
+  05.tomcat.md:
+
+  06.tomcat.md:
+
+  07.tomcat.md:
+
+  00.devrock.md:
+
+  01.devrock.md:
+
+  02.devrock.md:
+
+  03.devrock.md:
+
+  04.devrock.md:
+
+  05.devrock.md:
+
+  06.devrock.md:
+
+  07.devrock.md:
+
+  08.devrock.md:
+
+  09.devrock.md:
+
+  10.devrock.md:
+
+  11.devrock.md:
+
+  12.devrock.md:
+
+  
+wizard:
+  displayTitle: "Eclipse setup"

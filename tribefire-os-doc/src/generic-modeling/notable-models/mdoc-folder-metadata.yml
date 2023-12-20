@@ -1,0 +1,23 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  
+  meta-model:
+    tags:
+      - model
+
+  meta-data-model:
+    tags:
+      - model
+
+  resource-model:
+    tags:
+      - model
+
+  reason-model:
+    tags:
+      - model
+
+  service-api-model:
+    tags:
+      - model

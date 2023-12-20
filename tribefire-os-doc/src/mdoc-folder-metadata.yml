@@ -1,0 +1,17 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  
+  tribefire-overview.md:
+    tags:
+      - overview
+
+  tribefire-glossary.md:
+
+  generic-modeling:
+
+  build-system:
+
+  tools:
+
+  tribefire-platform:

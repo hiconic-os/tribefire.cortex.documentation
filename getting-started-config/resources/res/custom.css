@@ -1,0 +1,56 @@
+.header {
+    /* better v-alignment of header elements. Prevents "jumping" of logo between pages */
+    align-items: normal;
+}
+
+/* The footer, copyright, feedback and logo elements are here to restore the original layout of the footer */
+footer {
+    min-height: 60px;
+}
+
+.inner-container {
+    min-height: calc(100% - 60px);
+}
+
+#top-hiconic-logo {
+    color:orange;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    padding-left: 8px;
+}
+
+.copyright {
+           font-size: smaller;
+}    
+.copyright, .logo {
+            float: right;
+           padding: 5px;
+}
+.feedback {
+    font-size: 18px;
+    border: 1px solid orange;
+    padding: 5px;
+    margin-top: 5px;
+    float: left;
+}
+.feedback:hover {
+    text-decoration: underline;
+}
+.feedback a {
+    color: black;
+    text-decoration: none;
+    padding: 2px;
+}
+
+/* Special settings for footer and header */
+.legalmatters a:hover {
+	text-decoration: underline;
+}
+.legalmatters a {
+	color: rgb(160, 144, 80);
+	text-decoration: none;
+}
+img.logo-small {
+	height: 2.2em;
+}

@@ -1,0 +1,15 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  
+  tutorial:
+    displayTitle: "Tutorial"    
+    priority: 0
+
+  details:
+    displayTitle: "Details"
+    priority: 10
+
+  practice:
+    displayTitle: "Practice"
+    priority: 20

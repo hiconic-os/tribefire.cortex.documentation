@@ -1,0 +1,26 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:  
+  01-abstract.md:
+      displayTitle: "Abstract"
+
+  02-setup-sdk.md:
+      displayTitle: "Setup SDK"
+
+  03-create-dev-env.md:
+      displayTitle: "Create DevEnv"
+
+  04-setup-platform.md:
+      displayTitle: "Setup Platform"
+
+  05-start-platform.md:
+      displayTitle: "Start Platform"
+
+  06-explorer-experience.md:
+      displayTitle: "Explorer Experience"
+
+  07-additional-info.md:
+      displayTitle: "Additional Information"
+
+wizard:
+  displayTitle: "Getting Started"

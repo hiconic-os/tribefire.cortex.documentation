@@ -1,0 +1,20 @@
+---
+!com.braintribe.doc.meta.CustomDocMetaData
+
+title: "Hiconic"
+assets:
+  "tribefire.cortex.documentation:getting-started-doc": 
+    displayTitle: Getting Started
+
+  "tribefire.cortex.documentation:getting-started-overview-page": 
+    displayTitle: Entry Points
+
+entrypoints:
+  - assetId: tribefire.cortex.documentation:getting-started-doc
+    displayInfo: 
+      displayTitle: Getting Started
+      startingPoint: overview.md
+
+  - assetId: tribefire.cortex.documentation:getting-started-overview-page
+
+    

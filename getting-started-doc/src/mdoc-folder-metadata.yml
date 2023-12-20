@@ -1,0 +1,16 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  
+  intro:
+    displayTitle: "Introduction and Setup"
+    shortDescription: "Introduction"
+    priority: 0
+
+  eclipse-setup:
+    displayTitle: "Setup Eclipse"
+    priority: 10
+
+  create-extension:
+    displayTitle: "Create Extensions"
+    priority: 20

@@ -141,7 +141,7 @@ The effect of the above design is shown below:
 #### Advanced Customization Options
 You may want to further customize your portal. Some of the typical customization cases include:
 
-* Changing some of the resources, such as the icons (for example the Academy logo and TF favicon)
+* Changing some of the resources, such as the icons (for example logo and TF favicon)
 * Changing the default text in the landing page
 * Customizing the header and the footer
 * Applying custom stylesheets

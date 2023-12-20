@@ -1,0 +1,23 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  01-intro-create-extension.md: 
+
+  02-create-extension-with-jinni.md:
+
+  03-create-debug-project.md:
+
+  04-load-extension-to-eclipse.md:
+
+  05-run-extension-from-eclipse.md:
+
+  06-test-service-processor.md:
+
+  07-add-another-request.md:
+
+  08-add-unit-test.md:
+
+  further-reading.md:
+
+wizard:
+  displayTitle: "Create Extensions"

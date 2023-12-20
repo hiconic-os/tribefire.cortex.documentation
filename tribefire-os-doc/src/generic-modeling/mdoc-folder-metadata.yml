@@ -1,0 +1,20 @@
+---
+!com.braintribe.doc.meta.CustomFolderMetaData
+files:
+  
+  gm-overview.md:
+    tags:
+      - overview
+
+  models-and-gm-types.md:
+
+  ref-gm-type-system.md:
+    tags:
+      - reference
+
+  gm-type-reflection.md:
+
+  advanced-entity-features.md:
+
+  notable-models:
+
