@@ -1,0 +1,98 @@
+name: Publish Documentation
+
+# https://docs.github.com/en/actions/using-workflows/reusing-workflows
+
+on:
+  workflow_dispatch:
+
+# Ensure no two workflows of this type are running at the same time
+concurrency:
+  group: ${{ github.workflow }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: ghcr.io/hiconic-os/ci-devrock-sdk/main:latest
+
+    env:
+      # Used in this file
+
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_REPO_NAME: ${{ github.event.repository.name }}
+      GIT_REPO_DIR: ${{ github.workspace }}/git-repo
+
+      DR_OPTS: "--stacktrace"
+
+      # Used by Devrock tools
+
+      DEVROCK_REPOSITORY_CONFIGURATION: ${{ github.workspace }}/git-repo/repository-configuration-ci.yaml
+
+      DEVROCK_PIPELINE_EXTERNAL_SEQUENCING: true
+      DEVROCK_PIPELINE_CANDIDATE_INSTALL: false
+
+      # Required by repository-configuration-ci.yaml (in each repository)
+
+      GITHUB_READ_PACKAGES_TOKEN: ${{ secrets.DEVROCK_PIPELINE_UPLOAD_PASSWORD }}
+
+      DEVROCK_PIPELINE_UPLOAD_USER: ${{ secrets.DEVROCK_PIPELINE_UPLOAD_USER }}
+      DEVROCK_PIPELINE_UPLOAD_PASSWORD: ${{ secrets.DEVROCK_PIPELINE_UPLOAD_PASSWORD }}
+
+      DEVROCK_PIPELINE_COLORS: false
+
+      # SFTP
+      SFTP_HOST: home29449762.1and1-data.host
+      SFTP_PORT: 22
+      SFTP_REMOTE_DIR: /docs
+
+      SFTP_USER: ${{ secrets.HICONIC_OS_ORG_SFTP_USER }}
+      SFTP_PASS: ${{ secrets.HICONIC_OS_ORG_SFTP_PASSWORD }}
+
+    defaults:
+      run:
+        working-directory: ${{ env.GIT_REPO_DIR }}
+
+    steps:
+      - name: Initialize Workspace
+        working-directory: ${{ github.workspace }}
+        run: |
+          mkdir inst
+          mkdir repo
+          mkdir doc
+
+          # Whole known_hosts is commented out as we can use "set sftp:auto-confirm yes" in lftp
+
+          # NOTE:
+          # for whatever reason lftp doesn't look for known_hosts in ~/.ssh, but in /root/.ssh in GitHub actions
+          # The /root is the original home dir of the devrock-sdk docker image, later overridden to /github/home byt GH.
+
+          # prefetch secure key for the ftp host
+          #mkdir -p /root/.ssh
+          #ssh-keyscan -t rsa -v -H ${SFTP_HOST} >> /root/.ssh/known_hosts
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          path: "git-repo"
+
+      - name: Build Doc
+        run: |
+          # $version will be '    <version>A.B.XYZ</version>'
+          version="$(cat parent/pom.xml | grep "<version>")"
+          echo "version tags: $version"
+
+          # [echo $version] strips the leading spaces ->
+          # sed strips tags: 'A.B.XYZ'
+          # awk: 'A.B'
+          version="$(echo $version | sed s/\<\\/*version\>//g | awk -F'.' '{print $1"."$2}')"
+          echo "version parsed: $version"
+
+          jinni package-platform-setup --setupDependency tribefire.cortex.documentation:getting-started-setup#$version --packageBaseDir '../doc' --noDocu false : options -v
+
+      - name: Upload Doc
+        run: |
+          lftp -u $SFTP_USER,$SFTP_PASS -p $SFTP_PORT sftp://$SFTP_HOST <<EOF
+          set sftp:auto-confirm yes
+          mirror --reverse --delete --verbose "../doc/tribefire-master/documentation/mdoc" "$SFTP_REMOTE_DIR"
+          quit
+          EOF
