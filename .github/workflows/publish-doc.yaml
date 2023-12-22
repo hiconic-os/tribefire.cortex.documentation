@@ -39,14 +39,6 @@ jobs:
 
       DEVROCK_PIPELINE_COLORS: false
 
-      # SFTP
-      SFTP_HOST: home29449762.1and1-data.host
-      SFTP_PORT: 22
-      SFTP_REMOTE_DIR: /docs
-
-      SFTP_USER: ${{ secrets.HICONIC_OS_ORG_SFTP_USER }}
-      SFTP_PASS: ${{ secrets.HICONIC_OS_ORG_SFTP_PASSWORD }}
-
     defaults:
       run:
         working-directory: ${{ env.GIT_REPO_DIR }}
@@ -89,10 +81,18 @@ jobs:
 
           jinni package-platform-setup --setupDependency tribefire.cortex.documentation:getting-started-setup#$version --packageBaseDir '../doc' --noDocu false : options -v
 
-      - name: Upload Doc
-        run: |
-          lftp -u $SFTP_USER,$SFTP_PASS -p $SFTP_PORT sftp://$SFTP_HOST <<EOF
-          set sftp:auto-confirm yes
-          mirror --reverse --delete --verbose "../doc/tribefire-master/documentation/mdoc" "$SFTP_REMOTE_DIR"
-          quit
-          EOF
+      - name: "Upload Doc"
+        uses: hiconic-os/hiconic.ci.workflows/upload-to-hiconic-os@main
+        with:
+          user: ${{ secrets.HICONIC_OS_ORG_SFTP_USER }}
+          password: ${{ secrets.HICONIC_OS_ORG_SFTP_PASSWORD }}
+          local-dir: "doc/tribefire-master/documentation/mdoc" # default working dir is ignored with composite actions, so are not inside "git-repo"
+          remote-dir: "/docs"
+
+#      - name: Upload Doc
+#        run: |
+#          lftp -u $SFTP_USER,$SFTP_PASS -p $SFTP_PORT sftp://$SFTP_HOST <<EOF
+#          set sftp:auto-confirm yes
+#          mirror --reverse --delete --verbose "../doc/tribefire-master/documentation/mdoc" "$SFTP_REMOTE_DIR"
+#          quit
+#          EOF
