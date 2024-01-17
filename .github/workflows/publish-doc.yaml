@@ -86,13 +86,5 @@ jobs:
         with:
           user: ${{ secrets.HICONIC_OS_ORG_SFTP_USER }}
           password: ${{ secrets.HICONIC_OS_ORG_SFTP_PASSWORD }}
-          local-dir: "doc/tribefire-master/documentation/mdoc" # default working dir is ignored with composite actions, so are not inside "git-repo"
+          local-dir: "doc/tribefire-master/documentation/mdoc" # default working dir is ignored with composite actions, so we are not inside "git-repo"
           remote-dir: "/docs"
-
-#      - name: Upload Doc
-#        run: |
-#          lftp -u $SFTP_USER,$SFTP_PASS -p $SFTP_PORT sftp://$SFTP_HOST <<EOF
-#          set sftp:auto-confirm yes
-#          mirror --reverse --delete --verbose "../doc/tribefire-master/documentation/mdoc" "$SFTP_REMOTE_DIR"
-#          quit
-#          EOF
