@@ -7,21 +7,21 @@ Next we create an `Eclipse` project so we can run and debug our application from
   dr
   ```
 
-  **Explanation:** Artifacts must be installed in the local repository (`tf-tutorial/repo`) as it's required by a later step - local installation with and creation of an `Eclipse` project for debugging.
+  **Explanation:** Artifacts must be installed in the local repository (`hc-tutorial/repo`) as it's required by a later step - local installation with and creation of an `Eclipse` project for debugging.
 
 * Configure our tutorial as the app to install in our `main` setup task and add a flag to create an `Eclipse` project for debugging as part of installation.
 
-  Set `tf-tutorial/commands/setup-main.yaml` content to:
+  Set `hc-tutorial/commands/setup-main.yaml` content to:
   ```yaml
   !com.braintribe.model.platform.setup.api.SetupLocalTomcatPlatform {
     # dependency on the tutorial project's setup
-    setupDependency: "tf.tutorial:tf-example-setup#[1,2)",
+    setupDependency: "hc.tutorial:hc-example-setup#[1,2)",
 
     # dir where to install our application
     installationPath: "${config.base}/../tf-setups/main",
 
     # create an Eclipse project for debugging
-    # it's name is derived from the setupDependency, i.e. tf.tutorial:tf-example-setup-debug
+    # it's name is derived from the setupDependency, i.e. hc.tutorial:hc-example-setup-debug
     debugJava: true,
   }
   ```
@@ -35,7 +35,7 @@ Next we create an `Eclipse` project so we can run and debug our application from
  * All done, our application is now installed in our `dev-env` under
 
   ```filesystem
-  tf-tutorial/
+  hc-tutorial/
       tf-setups/
           main/
   ```

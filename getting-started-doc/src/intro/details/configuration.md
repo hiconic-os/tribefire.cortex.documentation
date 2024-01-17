@@ -27,13 +27,7 @@ You may tune the generation of new devenvs to your requirements by modifying the
 
 - **eclipseWorkspaceTemplate** is the path to your desired eclipse workspace template configuration. The SDK provides a suited version with many good settings in `templates/eclipse-workspace`, which therefore is the default. 
 
-- **repoConfTemplate** is the path to your repository-configuration template. The SDK provides two options:
-  * `templates/repository-configuration-devenv-hiconic-os.yaml` - uses Github Maven repository of [hiconic-os](https://github.com/hiconic-os) and requires a [Personal Access Token](https://github.com/settings/tokens) with (at least) `read:packages` scope for the `GITHUB_READ_PACKAGES_TOKEN` environment variable.
-
-  * `templates/repository-configuration-devenv-bt.yaml` is a proprietary Braintribe artifactory at [https://artifactory.braintribe.com](https://artifactory.braintribe.com) for which you need to provide personal credentials in environment variables: **OPENTF_REPO_USER** and **OPENTF_REPO_PASSWORD**. 
-
-  Of course you can also provide a custom template file. 
-
+- **repoConfTemplate** is the path to your repository-configuration template. The SDK comes with `templates/repository-configuration-devenv-hiconic-os.yaml`, which points at the `GitHub` Maven repository of [hiconic-os](https://github.com/hiconic-os) and requires a [Personal Access Token](https://github.com/settings/tokens) with (at least) `read:packages` scope for the `GITHUB_READ_PACKAGES_TOKEN` environment variable.
 
 ### Build system
 

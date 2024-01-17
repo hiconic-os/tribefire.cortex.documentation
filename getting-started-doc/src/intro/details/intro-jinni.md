@@ -40,4 +40,4 @@ Examples of what can be done are:
 
 - switch on verbose output with `options -v`
 - use specific repository configuration `options --repositoryConfiguration <path-to-yaml>`
-- echo command in yaml syntax: `options -e`
+- echo command in YAML syntax: `options -e`

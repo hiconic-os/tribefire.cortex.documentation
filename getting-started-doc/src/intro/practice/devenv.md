@@ -4,13 +4,13 @@ Here you will learn how to practically work with a [dev-environment](../details/
 
 ## Excercise 1
 
-In a devenv you can provide new jinni commands (like scripts) by providing one or several commands in serialized yaml format. 
+In a devenv you can provide new jinni commands (like scripts) by providing one or several commands in serialized YAML format. 
 
-The information needed for writing such scripts can be obtained from `jinni help <command>` since this will printout the qualified name of the command and also a  description of all properties. The *mandatory* properties must be included in the yaml script, the *optional* properties only if needed. 
+The information needed for writing such scripts can be obtained from `jinni help <command>` since this will printout the qualified name of the command and also a  description of all properties. The *mandatory* properties must be included in the YAML script, the *optional* properties only if needed. 
 
 The advantage of the `command` path inside a devenv is that jinni is configured to automatically use commands located there. So this is very convenient to store often repeated commands. 
 
-With the `jinni --fromFile <script.yaml>` you can also run scripts from concrete yaml files. 
+With the `jinni --fromFile <script.yaml>` you can also run scripts from concrete YAML files. 
 
 1. Create a new devenv, name it *jinni-ex1*. Remember: put all your devenvs **inside** `devrock-sdk/env`.
 

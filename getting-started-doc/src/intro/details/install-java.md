@@ -32,4 +32,4 @@ One of the important differences between any java JDK version is licensing. Make
 - OracleJDK, in particular the [NFTC](https://www.oracle.com/java/technologies/javase/jdk-faqs.html) and [OTN](https://www.oracle.com/downloads/licenses/javase-license1.html) versions. **Be careful**: production use of OracleJDK quickly requires a paid license.  
 - OpenJDK uses a free open source *GNU General Public License, version 2, with the Classpath Exception*, see [here](https://openjdk.org/legal/). It is free for development, distribution and production.
 
-Many linux systems automatically provide OpenJDK installations and in almost all cases this will serve as a very robust and save java development environment. 
+Many Linux systems automatically provide OpenJDK installations and in almost all cases this will serve as a very robust and safe java development environment. 

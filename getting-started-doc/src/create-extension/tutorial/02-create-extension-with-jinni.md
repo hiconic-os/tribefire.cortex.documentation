@@ -4,14 +4,14 @@ Using `Jinni` we start by creating a **new dev-env** and inside of it create all
 
 * Open a terminal inside `devrock-sdk/env` directory. 
 
-* Create a new dev-env called `tf-tutorial`:
+* Create a new dev-env called `hc-tutorial`:
   ```cli
-  jinni create-dev-env tf-tutorial
+  jinni create-dev-env hc-tutorial
   ```
 
   Expected file structure:
   ```filesystem
-  tf-tutorial/
+  hc-tutorial/
       artifacts/
       commands/
           setup-main.yaml
@@ -21,41 +21,41 @@ Using `Jinni` we start by creating a **new dev-env** and inside of it create all
       dev-environment.yaml
   ```
 
-* Navigate to `tf-tutorial/git`:
+* Navigate to `hc-tutorial/git`:
   ```cli
-  cd tf-tutorial/git
+  cd hc-tutorial/git
   ```
 
-* Create a new directory `tf.tutorial` for your code:
+* Create a new directory `hc.tutorial` for your code:
   ```cli
-  mkdir tf.tutorial
+  mkdir hc.tutorial
   ```
 
   _**Note:** This directory is both a git repository and an artifact group, i.e. it's name will be used as a group in the `pom.xml`s of our artifacts._
 
-* Navigate to this `tf.tutorial`.
+* Navigate to this `hc.tutorial`.
   ```cli
-  cd tf.tutorial
+  cd hc.tutorial
   ```
 
-* Create a `Tribefire` extension with a sample `Service Processor`:
+* Create a `Hiconic` extension with a sample `Service Processor`:
   ```cli
-  jinni create-extension tf-example --samples all 
+  jinni create-extension hc-example --samples all
   ```
 
   _**Note:** We use `--samples all` which for now only creates a `ServiceProcessor`, but will later involve more samples._
 
   Expected file structure:
   ```filesystem
-  tf.tutorial/
+  hc.tutorial/
       parent/
-      tf-example-api-model/
-      tf-example-deployment-model/
-      tf-example-doc/
-      tf-example-initializer/
-      tf-example-module/
-      tf-example-processing/
-      tf-example-processing-test/
-      tf-example-setup/
+      hc-example-api-model/
+      hc-example-deployment-model/
+      hc-example-doc/
+      hc-example-initializer/
+      hc-example-module/
+      hc-example-processing/
+      hc-example-processing-test/
+      hc-example-setup/
       build.xml
   ```

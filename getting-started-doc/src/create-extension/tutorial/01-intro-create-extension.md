@@ -1,14 +1,16 @@
 # Introduction
 
 This tutorial covers:
-* Creating a `Tribefire` extension with a sample `ServiceProcessor` with `Jinni` CLI tool
+* Creating a `Hiconic` extension with a sample `ServiceProcessor` (using `Jinni` CLI tool)
 * Preparing `Eclipse` workspace
 * Running the application from `Eclipse`
 * Adding more requests to the sample `ServiceProcessor`
 
+**Note:** `Hiconic` was previously called `Tribefire` and this name or its `tf` shortcut are used on many places, so don't get confused.
+
 ## Motivation
 
-`Tribefire` offers a modular architecture with a core platform, which is primarily a base for adding extensions. Everything else comes as an extension, whether it's custom code or common features like:
+`Hiconic` offers a modular architecture with a core platform, which is primarily a base for adding extensions. Everything else comes as an extension, whether it's custom code or common features like:
 * Storing data in SQL DB
 * `REST` API
 * Render data as HTML

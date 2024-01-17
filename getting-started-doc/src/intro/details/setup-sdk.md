@@ -1,9 +1,7 @@
 # Setup the DevRock-SDK
 
 **Preconditions**: 
-- Java must be installed. 
-We currently advice Java v17 or later. Type `java --version` to see if you are set up properly. [Read more....](install-java.md).
-- Be prepared to work on the command line / terminal (on Windows, Mac, or Linux). The initial setup and understanding of important tools require this. 
+- Java 21 (or later) must be installed. Type `java --version` to see if you are set up properly. [Read more....](install-java.md).
 
 ### The DevRock-SDK developer package
   - Download the package from here: [Download SDK](https://academy.modularmind.eu/services/download-sdk) 

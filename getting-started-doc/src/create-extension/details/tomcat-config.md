@@ -7,11 +7,11 @@ Let's have a look at how the `jinni setup-main` command prepares a local `Tomcat
 After executing [jinni setup-main](../tutorial/03-create-debug-project.md) we will have (among others) the following directories:
 
 ```filesystem
-tf-tutorial/
+hc-tutorial/
     tf-setups/
         main/
             debug/
-                tf-example-setup-debug/
+                hc-example-setup-debug/
             runtime/
                 host/
     eclipse-workspace/
@@ -33,13 +33,13 @@ The `tribefire-explorer` inside `webapps` is our client application which we acc
 
 There is, however, no other application in `webapps`, because we told `jinni` not to do it by setting the `debugJava` to `true` [here](../tutorial/03-create-debug-project.md).
 
-Instead there is `tribefire-services.xml` which references our debug project - `tf-example-setup-debug` - which `jinni setup-main` created inside the `debug` folder.
+Instead there is `tribefire-services.xml` which references our debug project - `hc-example-setup-debug` - which `jinni setup-main` created inside the `debug` folder.
 
 ## Eclipse Configuration
 
-In order to start the server the `Tomcat` plugin needs to know about our `Tomcat` installation. This **Tomcat home** is pre-configured when the workspace is created (with `jinni create-dev-env tf-tutorial`) to:
+In order to start the server the `Tomcat` plugin needs to know about our `Tomcat` installation. This **Tomcat home** is pre-configured when the workspace is created (with `jinni create-dev-env hc-tutorial`) to:
 ```plain
-env/tf-tutorial/tf-setups-runtime/host
+env/hc-tutorial/tf-setups/main/runtime/host
 ```
 
 ![](tomcat-config-home.png)

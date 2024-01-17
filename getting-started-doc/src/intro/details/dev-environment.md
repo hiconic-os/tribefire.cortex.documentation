@@ -23,7 +23,7 @@ A dev-env has the following structure:
 
 * **artifacts/repository-configuration.yaml** is the config file for artifact resolution and installation. [More details...](#configuration)
 
-* **commands** contains individual jinni alias macros. Each is contained in a yaml file and is a list of jinni commands. Within a dev-env those aliases are always found. 
+* **commands** contains individual jinni alias macros. Each is contained in a YAML file and is a list of jinni commands. Within a dev-env those aliases are always found. 
 
 * **dev-environment.yaml** is a marker to indicate a dev-env
 

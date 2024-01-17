@@ -4,21 +4,21 @@ For good measure, let's review one more time the files we see here, from top to 
 
 Note that a sample request was created which simply transforms given text to uppercase.
 
-**tf-example-api-model** contains the abstract `TfExampleServiceRequest` and a concrete `TfExampleTransformToUpperCase` request.
+**hc-example-api-model** contains the abstract `HcExampleServiceRequest` and a concrete `HcExampleTransformToUpperCase` request.
 
-**tf-example-deployment-model** contains a denotation type `TfExampleServiceProcessor` for our expert.
+**hc-example-deployment-model** contains a denotation type `HcExampleServiceProcessor` for our expert.
 
-**tf-example-initializer** contains, besides standard initializer classes, a `TfExampleServiceDomainSpace`. Here the entities representing our `ServiceDomain` with a `ServiceProcessor` and a properly configured model are defined.
+**hc-example-initializer** contains, besides standard initializer classes, a `HcExampleServiceDomainSpace`. Here the entities representing our `ServiceDomain` with a `ServiceProcessor` and a properly configured model are defined.
 
 Q: How does the initialization work?
-A: When starting the server, all initializers are run and generate data for every `Collaborative Smood Access`, such as `cortex`. The process calls the `TfExampleInitializerSpace.initializer()` method, which in our sample looks like this:
+A: When starting the server, all initializers are run and generate data for every `Collaborative Smood Access`, such as `cortex`. The process calls the `HcExampleInitializerSpace.initializer()` method, which in our sample looks like this:
 ```java
 @Override
 public void initialize() {
-	tfExampleServiceDomain.serviceDomain();
+	HcExampleServiceDomain.serviceDomain();
 }
 ```
-This thus triggers our `TfExampleServiceDomainSpace.serviceDomain()` method which than leads to invocation of all the other methods in that class. Every time we call `create()` with an entity type as parameter, such as `create(ServiceDomain.T)`, a new instance is created inside our access.
+This thus triggers our `HcExampleServiceDomainSpace.serviceDomain()` method which than leads to invocation of all the other methods in that class. Every time we call `create()` with an entity type as parameter, such as `create(ServiceDomain.T)`, a new instance is created inside our access.
 
 BTW we specify this initializer targets `cortex` in its `asset.man` file:
 
@@ -27,27 +27,27 @@ $nature = !com.braintribe.model.asset.natures.PrimingModule()
 .accessIds = ('cortex')
 ```
 
-**tf-example-module** contains `TfExampleModuleSpace` which binds our denotation type `TfExampleServiceProcessor` to its expert implementation `TfExampleRequestProcessor`.
+**hc-example-module** contains `HcExampleModuleSpace` which binds our denotation type `HcExampleServiceProcessor` to its expert implementation `HcExampleRequestProcessor`.
 
 The binding code:
 ```java
 @Override
 public void bindDeployables(DenotationBindingBuilder bindings) {
-    bindings.bind(TfExampleServiceProcessor.T) //
+    bindings.bind(HcExampleServiceProcessor.T) //
             .component(tfPlatform.binders().serviceProcessor()) //
-            .expertSupplier(this::tfExampleRequestProcessor);
+            .expertSupplier(this::HcExampleRequestProcessor);
 }
 ```
-**tf-example-processing-test** is self-explanatory. It contains a sample test for our convert-to-uppercase processor.
+**hc-example-processing-test** is self-explanatory. It contains a sample test for our convert-to-uppercase processor.
 
-**tf-example-processing** contains the expert for evaluation of `TfExampleServiceRequest`. Note the implementation derives from `AbstractDispatchingServiceProcessor`, which provides a convenient way to simply map requests to corresponding handler methods:
+**hc-example-processing** contains the expert for evaluation of `HcExampleServiceRequest`. Note the implementation derives from `AbstractDispatchingServiceProcessor`, which provides a convenient way to simply map requests to corresponding handler methods:
 ```java
 @Override
-protected void configureDispatching(DispatchConfiguration<TfExampleServiceRequest, Object> dispatching) {
-		dispatching.registerReasoned(TfExampleTransformToUpperCase.T, (c, r) -> transformToUpperCase(r));
+protected void configureDispatching(DispatchConfiguration<HcExampleServiceRequest, Object> dispatching) {
+		dispatching.registerReasoned(HcExampleTransformToUpperCase.T, (c, r) -> transformToUpperCase(r));
 }
 
-private Maybe<String> transformToUpperCase(TfExampleTransformToUpperCase request) {
+private Maybe<String> transformToUpperCase(HcExampleTransformToUpperCase request) {
 	String text = request.getText();
 
 	if (text == null || text.isEmpty())
@@ -60,9 +60,9 @@ private Maybe<String> transformToUpperCase(TfExampleTransformToUpperCase request
 
 > NOTE we use `registerReasend` which forces our handler method to return `Maybe<String>` rather than directly `String`. This is highly recommended as it brings native error-handling to the (request processing) protocol.
 
-**tf-example-setup-debug** is the project that was created with `jinni setup-main`. It reflects the `tf-example-setup` artifact and references the `Tribefire` platform as well as all the modules and initializers. This project is run by the `Tomcat` plugin in order to debug our application.
+**hc-example-setup-debug** is the project that was created with `jinni setup-main`. It reflects the `hc-example-setup` artifact and references the `Hiconic` platform as well as all the modules and initializers. This project is run by the `Tomcat` plugin in order to debug our application.
 
-**tf-example-setup** as the name suggests, defines our entire application, including the `Tribefire` platform, modules, initializers, front-end application (in our case `tribefire-explorer`) and everything else.
+**hc-example-setup** as the name suggests, defines our entire application, including the `Hiconic` platform, modules, initializers, front-end application (in our case `tribefire-explorer`) and everything else.
 
 When `Jinni` performs a setup, it collects all the assets and process each of them specifically, based on their so called nature.
 
