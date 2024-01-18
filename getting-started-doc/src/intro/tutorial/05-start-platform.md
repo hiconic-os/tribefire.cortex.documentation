@@ -17,7 +17,7 @@ The command will startup the tomcat with the platform on default port 8080. Wait
 INFO    Catalina     'Server startup in [22165] milliseconds'  []
 ```
 
-In order to verify the correct startup, open a browser and navigate to the following url:
+In order to verify the correct startup, open a browser and navigate to the following URL:
 
 ```plain
 http://localhost:8080
@@ -32,7 +32,7 @@ Press the `Sign in` button and login with default credentials:
 Username: __`cortex`__   
 Password: __`cortex`__
 
-_Note: The Chrome browser may warn about a password breach. You can savely ignore this warning, as we are using this password only for development purposes._
+_**Note:** Your browser may warn about a password breach. You can ignore this warning, as this password is used for development purposes only._
 
 You are redirected to the platform landing page that looks like:
 
