@@ -17,7 +17,7 @@ These links jump directly into the tutorials:
 
 [Introduction and setup](intro/tutorial/01-abstract.md)
 
-[Setup eclipse IDE](eclipse-setup/tutorial/00.devrock.md)
+[Setup Eclipse IDE](eclipse-setup/tutorial/00.devrock.md)
 
 [Create your first extension](create-extension/tutorial/01-intro-create-extension.md)
 

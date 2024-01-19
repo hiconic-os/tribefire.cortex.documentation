@@ -6,13 +6,7 @@ For interest here are the plugins listed in the category `devrock's tools`. Just
 
 Press `Next` to continue.
 
-<style>
-    img[alt=choose-devrock-plugins] {
-        width: 50em;
-    }
-</style>
-
 ![choose-devrock-plugins](./images/choose-devrock-plugins.png "modularmind update-site contents")
-
-
-
+<style>
+    img[alt=choose-devrock-plugins] { max-width: 100%; }
+</style>

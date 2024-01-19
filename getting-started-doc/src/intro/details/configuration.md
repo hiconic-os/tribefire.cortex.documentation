@@ -21,11 +21,11 @@ In the SDK, all repository caches are (best) configured to point to the same pat
 
 One of the main tasks of the sdk is to facilitate the setup of [devenv](dev-environment.md)`s. While the SDK provides the main tools, a devenv is your everyday's development environment for your concrete project. 
 
-A new devenv can be created with `jinni create-dev-env <name>` and will come with a dedicated `artifacts/repository-configuration.yaml` and also a default eclipse workspace configuration in `eclipse-workspace`.
+A new devenv can be created with `jinni create-dev-env <name>` and will come with a dedicated `artifacts/repository-configuration.yaml` and also a default Eclipse workspace configuration in `eclipse-workspace`.
 
 You may tune the generation of new devenvs to your requirements by modifying the SDK `tools/jinni/conf/dev-env-generator-config.yaml`: 
 
-- **eclipseWorkspaceTemplate** is the path to your desired eclipse workspace template configuration. The SDK provides a suited version with many good settings in `templates/eclipse-workspace`, which therefore is the default. 
+- **eclipseWorkspaceTemplate** is the path to your desired Eclipse workspace template configuration. The SDK provides a suited version with many good settings in `templates/eclipse-workspace`, which therefore is the default. 
 
 - **repoConfTemplate** is the path to your repository-configuration template. The SDK comes with `templates/repository-configuration-devenv-hiconic-os.yaml`, which points at the `GitHub` Maven repository of [hiconic-os](https://github.com/hiconic-os) and requires a [Personal Access Token](https://github.com/settings/tokens) with (at least) `read:packages` scope for the `GITHUB_READ_PACKAGES_TOKEN` environment variable.
 

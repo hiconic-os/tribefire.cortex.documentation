@@ -27,7 +27,7 @@ A dev-env has the following structure:
 
 * **dev-environment.yaml** is a marker to indicate a dev-env
 
-* **eclipse-workspace** contains your (pre-configured) eclipse workspace
+* **eclipse-workspace** contains your (pre-configured) Eclipse workspace
 
 * **git** contains one or multiple git repositories with  your actual project data
 

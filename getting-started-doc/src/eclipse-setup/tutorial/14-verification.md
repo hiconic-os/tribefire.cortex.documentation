@@ -1,12 +1,6 @@
 # Installation Verification
 
-After eclipse was restarted you should see the following tools in your toolbar:
-
-<style>
-    img[alt=tomcat-toolbar-fragment], img[alt=devrock-toolbar-fragment] {
-        height: 4em;
-    }
-</style>
+After Eclipse was restarted you should see the following tools in your toolbar:
 
 Tomcat Tools
 
@@ -20,3 +14,9 @@ This concludes this tutorial.
 
 Have fun!
 
+<style>
+    img[alt=tomcat-toolbar-fragment],
+    img[alt=devrock-toolbar-fragment] {
+        height: 3em;
+    }
+</style>
