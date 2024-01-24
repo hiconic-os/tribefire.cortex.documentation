@@ -7,5 +7,5 @@ The update-site for the devrock tools needs to be added. Click on the button *Ad
 ![add-update-site](./images/add-update-site.png "Eclipse install dialog")
 
 <style>
-    img[alt=add-update-site] { max- width: 100%; }
+    img[alt=add-update-site] { max-width: 100%; }
 </style>

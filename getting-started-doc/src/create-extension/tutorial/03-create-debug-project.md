@@ -1,15 +1,15 @@
 # Local Installation for Debugging
 
-Next we create an `Eclipse` project so we can run and debug our application from the IDE.
+Next we create an _Eclipse_ project so we can run and debug our application from the IDE.
 
 * Build and install all artifacts locally by running `dr`
   ```cli
   dr
   ```
 
-  **Explanation:** Artifacts must be installed in the local repository (`hc-tutorial/repo`) as it's required by a later step - local installation with and creation of an `Eclipse` project for debugging.
+  **Explanation:** Artifacts must be installed in the local repository (`hc-tutorial/repo`) as it's required by a later step - local installation with and creation of an _Eclipse_ project for debugging.
 
-* Configure our tutorial as the app to install in our `main` setup task and add a flag to create an `Eclipse` project for debugging as part of installation.
+* Configure our tutorial as the app to install in our `main` setup task and add a flag to create an _Eclipse_ project for debugging as part of installation.
 
   Set `hc-tutorial/commands/setup-main.yaml` content to:
   ```yaml

@@ -4,7 +4,7 @@ With all projects in our workspace everything is ready, we just need to start th
 
 _**Note:** More info about all the auto-generated configuration is available in the details section linked at the end of this tutorial._
 
-* Start the server by starting `Tomcat` from `Eclipse`:
+* Start the server by starting `Tomcat` from _Eclipse_:
 
   ![](../images/tomcat-start.png)
 

@@ -46,7 +46,7 @@ env/hc-tutorial/tf-setups/main/runtime/host
 
 ## Debug Project Purpose
 
-Having the debug-projects in Eclipse workspace alongside all the extension projects means the application is running with the code in `Eclipse`, rather than installed jars. This is thanks to the `devrock` AC plugin, which dynamically manages the dependencies.
+Having the debug-projects in Eclipse workspace alongside all the extension projects means the application is running with the code in _Eclipse_, rather than installed jars. This is thanks to the `devrock` AC plugin, which dynamically manages the dependencies.
 
 BTW some code changes are deployed while the server is running, so `Tomcat` restart isn't always needed.
 

@@ -10,4 +10,4 @@ Here's some more depth:
 
 * [Service Processors](service-processors.md) - more in-depth look at `Service Processors` and `Service Domains`.
 
-* [Tomcat Configuration](tomcat-config.md) - how `Tomcat` server is prepared locally and how comes `Eclipse` is able to start it with the correct project from workspace (`hc-example-setup-debug`) on board.
+* [Tomcat Configuration](tomcat-config.md) - how `Tomcat` server is prepared locally and how comes _Eclipse_ is able to start it with the correct project from workspace (`hc-example-setup-debug`) on board.

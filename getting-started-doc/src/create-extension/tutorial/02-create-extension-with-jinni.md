@@ -33,12 +33,12 @@ Using `Jinni` we start by creating a **new dev-env** and inside of it create all
 
   _**Note:** This directory is both a git repository and an artifact group, i.e. it's name will be used as a group in the `pom.xml`s of our artifacts._
 
-* Navigate to this `hc.tutorial`.
+* Navigate to `hc.tutorial`:
   ```cli
   cd hc.tutorial
   ```
 
-* Create a `Hiconic` extension with a sample `Service Processor`:
+* Create an extension with a sample `Service Processor`:
   ```cli
   jinni create-extension hc-example --samples all
   ```

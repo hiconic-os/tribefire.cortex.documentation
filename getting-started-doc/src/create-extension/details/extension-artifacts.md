@@ -60,9 +60,9 @@ private Maybe<String> transformToUpperCase(HcExampleTransformToUpperCase request
 
 > NOTE we use `registerReasend` which forces our handler method to return `Maybe<String>` rather than directly `String`. This is highly recommended as it brings native error-handling to the (request processing) protocol.
 
-**hc-example-setup-debug** is the project that was created with `jinni setup-main`. It reflects the `hc-example-setup` artifact and references the `Hiconic` platform as well as all the modules and initializers. This project is run by the `Tomcat` plugin in order to debug our application.
+**hc-example-setup-debug** is the project that was created with `jinni setup-main`. It reflects the `hc-example-setup` artifact and references the _Hiconic_ platform as well as all the modules and initializers. This project is run by the `Tomcat` plugin in order to debug our application.
 
-**hc-example-setup** as the name suggests, defines our entire application, including the `Hiconic` platform, modules, initializers, front-end application (in our case `tribefire-explorer`) and everything else.
+**hc-example-setup** as the name suggests, defines our entire application, including the _Hiconic_ platform, modules, initializers, front-end application (in our case `tribefire-explorer`) and everything else.
 
 When `Jinni` performs a setup, it collects all the assets and process each of them specifically, based on their so called nature.
 

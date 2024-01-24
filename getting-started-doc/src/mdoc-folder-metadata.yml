@@ -12,5 +12,5 @@ files:
     priority: 10
 
   create-extension:
-    displayTitle: "Create Extensions"
+    displayTitle: "Create an Application"
     priority: 20

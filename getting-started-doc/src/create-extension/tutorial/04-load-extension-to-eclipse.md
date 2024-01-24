@@ -1,11 +1,11 @@
 # Eclipse Preparation
 
-Each dev-env comes with its own `Eclipse` workspace. Let's open it from `Eclipse` menu `File/Switch Workspace/Other...` and picking the `hc-tutorial/eclipse-workspace` folder.
+Each dev-env comes with its own _Eclipse_ workspace. Let's open it from _Eclipse_ menu `File/Switch Workspace/Other...` and picking the `hc-tutorial/eclipse-workspace` folder.
 
 Let's now make sure we are running with Java 21, because (as of January 2024) Eclipse comes with Java 17:
 * From the top menu let's go to `Preferences`
   * `Window` / `Preferences` on Windows / Linux
-  * `Eclipse` / `Preferences` on Mac
+  * _Eclipse_ / `Preferences` on Mac
 * Navigate to `Java` / `Installed JREs`
 * Make sure your `Java 21` is on the list and checked
 

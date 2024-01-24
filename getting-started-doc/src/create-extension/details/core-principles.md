@@ -1,6 +1,6 @@
 # Core Hiconic Principles
 
-Core principles of `Hiconic` are **modeling** and **modularity**.
+Core principles of _Hiconic_ are **modeling** and **modularity**.
 
 ## What is a model?
 
@@ -20,7 +20,7 @@ public interface Book extends GenericEntity {
 }
 ```
 
-But modeling **data** (e.g. `Book`) is common practice. `Hiconic` models many other things, we'll focus on its **configuration** and **APIs** for now.
+But modeling **data** (e.g. `Book`) is common practice. _Hiconic_ models many other things, we'll focus on its **configuration** and **APIs** for now.
 
 ## Modeling Configuration
 

@@ -27,7 +27,7 @@ Notes:
 
 ## Swagger UI
 
-Open the `Hiconic` landing page:
+Open the _Hiconic_ landing page:
 ```url
 http://localhost:8080/tribefire-services
 ```
