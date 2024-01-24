@@ -30,7 +30,7 @@ Next we create an _Eclipse_ project so we can run and debug our application from
   ```cli
   jinni setup-main
   ```
-  _**Note:** Yes, this YAML file  is resolved based on the passed argument, as any other file inside `commands` folder would be._
+  _**Note:** This YAML file  is resolved based on the passed argument. As for any other command that jinni itself doesn't know, it looks for  a YAML of the same name inside `commands` directory._
 
  * All done, our application is now installed in our `dev-env` under
 

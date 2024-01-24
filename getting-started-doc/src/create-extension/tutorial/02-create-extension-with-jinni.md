@@ -1,6 +1,8 @@
 # Creating Artifacts
 
-Using `Jinni` we start by creating a **new dev-env** and inside of it create all the artifacts that make up an extension.
+Using `Jinni` we create a new _dev-env_ in which we create all the artifacts that make up an extension.
+
+### dev-env creation
 
 * Open a terminal inside `devrock-sdk/env` directory. 
 
@@ -21,6 +23,8 @@ Using `Jinni` we start by creating a **new dev-env** and inside of it create all
       dev-environment.yaml
   ```
 
+### group directory creation
+
 * Navigate to `hc-tutorial/git`:
   ```cli
   cd hc-tutorial/git
@@ -32,6 +36,8 @@ Using `Jinni` we start by creating a **new dev-env** and inside of it create all
   ```
 
   _**Note:** This directory is both a git repository and an artifact group, i.e. it's name will be used as a group in the `pom.xml`s of our artifacts._
+
+### artifacts creation
 
 * Navigate to `hc.tutorial`:
   ```cli

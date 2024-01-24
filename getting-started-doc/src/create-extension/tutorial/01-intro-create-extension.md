@@ -24,4 +24,4 @@ Creating a _Hiconic_ application thus means creating an extension and configurin
 
 * [devrock-sdk](/intro/details/devrock-sdk.md) local environment with tooling
 * [dev-env](/intro/details/dev-environment.md) understanding
-* [Eclipse with Devrock and Tomcat plugins](/eclipse-setup/tutorial/00.intro.md)
+* [Eclipse with Devrock and Tomcat plugins](/eclipse-setup/tutorial/00-intro.md)
