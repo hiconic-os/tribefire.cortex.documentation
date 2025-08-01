@@ -116,7 +116,7 @@ is the pure type-related information from a model. It includes the model name, e
 is an `Eclipse` plugin that adds helper features for `GWT` development.
 
 #### Ravenhurst
-is a servlet that ties in into the database of an (our) artifact repository, and can deliver information about its content and about changes happened after a specific point in time. It is used to implement the 'dynamic repository update policy', i.e. it allows to keep the local indices in sync with the remote data in a more efficient way than the standard repositories and build systems can.
+is a servlet that looks into the database of an (our) artifact repository, and can deliver information about its content and about changes happened after a specific point in time. It is used to implement the 'dynamic repository update policy', i.e. it allows to keep the local indices in sync with the remote data in a more efficient way than the standard repositories and build systems can.
 
 #### Shared Storage
 see [DCSA](#dcsa).

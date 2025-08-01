@@ -53,7 +53,7 @@ Now, let's write a generic code (one that doesn't even know that `Book` exists) 
 ```java
 public void print(GenericEntity entity) {
     EntityType<?> type = entity.entityType();
-    System.out.println(type.getShortName + ": ");
+    System.out.println(type.getShortName() + ": ");
 
     for (Property p: type.getProperties())
         System.out.println(p.getName() +  ": " + p.get(entity));
